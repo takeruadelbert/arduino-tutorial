@@ -7,9 +7,6 @@ IPAddress server(192,168,1,201);
 
 EthernetClient client;
 
-String temp = "data=5";
-bool printWebData = true;
-
 void setup() {
   int monitor_serial = 9600;
   Serial.begin(monitor_serial);
@@ -38,8 +35,6 @@ void setup() {
 //    Serial.println("GET /epass-passenger/api/test?data=5 HTTP/1.1");
     client.print("GET /epass-passenger/api/test?");
     Serial.print("GET /epass-passenger/api/test?");
-    client.print(temp);
-    Serial.print(temp);
     client.println(" HTTP/1.1");
     Serial.println(" HTTP/1.1");
     client.print("Host : ");
